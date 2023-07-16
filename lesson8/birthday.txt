@@ -1,0 +1,3 @@
+name,group,birthday
+Olexii,python,6
+Julia,frontend,1

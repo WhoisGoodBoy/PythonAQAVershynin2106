@@ -1,0 +1,10 @@
+{
+    "name": "John",
+    "age": 40,
+    "dogs": [
+        "first",
+        "second"
+    ],
+    "alive": true,
+    "sens": null
+}
