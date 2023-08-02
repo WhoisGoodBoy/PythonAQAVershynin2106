@@ -35,7 +35,7 @@ if type(first_value) == int or first_value < 25:
 
 second_value = 17
 if second_value <= 16 and second_value > 10:
-    print('it`s above 13')
+    print('it`s above lesson13')
 elif second_value:
     print("second_value_exists")
 

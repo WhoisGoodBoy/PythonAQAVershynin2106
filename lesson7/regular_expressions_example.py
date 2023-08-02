@@ -97,7 +97,7 @@ print(result)
 result = re.search(pattern, 'https://dgsafgs.fgasg.asg.comsGs')
 print(result)
 
-demo_str = 'date1 = 12-05-2023 date2 = 13.05.2023 date2 = 13.05.2023'
+demo_str = 'date1 = 12-05-2023 date2 = lesson13.05.2023 date2 = lesson13.05.2023'
 pattern = '\d{2}[-./]\d{2}[-./]\d{4}'
 result = re.findall(pattern, demo_str)
 print(result)
