@@ -3,7 +3,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 def test_01():
-    driver = Chrome('./drivers/chromedriver.exe')
+    driver = Chrome()
     driver.get('https://google.com')
     search_field_locator = "//textarea[@type='search']"
     element = driver.find_element(by='xpath', value=search_field_locator)
@@ -18,7 +18,7 @@ def test_01():
     assert second_page.text == 'how to use webdriver'
 
 def test_02():
-    driver = Chrome('./drivers/chromedriver.exe')
+    driver = Chrome()
     driver.get('https://google.com')
     search_field_locator = "//textarea[@type='search']"
     element = driver.find_element(by='xpath', value=search_field_locator)
