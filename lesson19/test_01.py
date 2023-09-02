@@ -35,7 +35,7 @@ def test_02():
     assert desired_text.text == 'Run Selenium Tests on Cloud'
 
 def test_03():
-    driver = Chrome('./drivers/chromedriver.exe')
+    driver = Chrome()
     driver.get('https://google.com')
     search_field_locator = "//textarea[@type='search']"
     element = driver.find_element(by='xpath', value=search_field_locator)
