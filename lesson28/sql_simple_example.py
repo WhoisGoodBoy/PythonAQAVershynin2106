@@ -7,9 +7,9 @@ connection = psycopg2.connect(user='postgres',
                               database='postgres')
 
 cursor = connection.cursor()
-cursor.execute('CREATE TABLE testtable (first_name varchar(25), age int);')
-cursor.execute("INSERT INTO testtable (first_name, age) VALUES ('ordinary_name', 30),('unordinary_name', 20);")
-cursor.execute('SELECT * from testtable;')
+cursor.execute('CREATE TABLE tablewithusers (id varchar(8) primary key, first_name varchar(25), last_name varchar(25), age int, email varchar(25));COMMIT;')
+cursor.execute("INSERT INTO tablewithusers (id, first_name, last_name, age, email) VALUES ('AAAAAAAA','ordinary_name', 'ordinary_surname', 30, 'ordinary@gmail.com'),('BBBBBBBB','unordinary_name', 'unordinary_surname',20, 'unordinary@gmail.com'); COMMIT;")
+cursor.execute('SELECT * from tablewithusers;')
 connection.commit()
 for row in cursor.fetchall():
     print(row)
