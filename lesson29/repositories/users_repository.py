@@ -16,13 +16,9 @@ class UsersRepository:
     def get_user_by_id_2(self, user_id):
         return self.__session.get(Users, {'id': user_id})
 
-    def add_one_row(self, user_id, first_name, last_name, age, email):
-        stmt = insert(Users).values(id=user_id,
-                                                    first_name=first_name,
-                                                    last_name=last_name,
-                                                    age=age,
-                                                    email=email)
-        stmt
+    def add_one_row(self,user):
+        self.__session.add(user)
+        self.__session.commit()
 
 
     #select(User).where(User.id == 5)
@@ -37,6 +33,7 @@ class UsersRepository:
 users_repository = UsersRepository()
 #first_user = users_repository.get_user_by_id('BBBBBBBB')
 #print(first_user)
-users_repository.add_one_row('cccccccc', 'CCCC', 'CCCC', 5, 'ccccc@ccc.ccc')
+user_to_add = Users(id='dddddddd', first_name='DDDD', last_name='DDDD', age=15, email='dddd@ddd.ddd')
+users_repository.add_one_row(user_to_add)
 all_users_2 = users_repository.get_all()
 print(all_users_2)
